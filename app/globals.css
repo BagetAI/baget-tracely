@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6B2D3E;
+  --secondary: #2C3E50;
+  --bg: #F4ECD8;
+  --text: #4A3728;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.05;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Ffilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-libre), serif;
+}
+
+code, pre {
+  font-family: var(--font-mono), monospace;
+}
+
+.btn-primary {
+  @apply bg-[#6B2D3E] text-white px-6 py-3 rounded-[4px] font-bold transition-all hover:bg-[#5A2534] shadow-[4px_4px_0px_#2C3E50];
+}
+
+.card {
+  @apply bg-white border border-[#4A3728] p-8 rounded-[4px] shadow-[4px_4px_0px_#4A3728];
+}
+
+hr {
+  border-top: 2px solid #4A3728;
+  margin: 2rem 0;
+}
