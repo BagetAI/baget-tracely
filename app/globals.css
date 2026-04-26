@@ -9,40 +9,54 @@
   --text: #4A3728;
 }
 
-body {
-  position: relative;
-  min-height: 100vh;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
 }
 
 .noise-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0.05;
-  z-index: 9999;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Ffilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
+/* Custom Heritage Rule */
+hr {
+  border-top: 2px solid var(--text);
+  margin: 3rem 0;
+  opacity: 0.2;
+}
+
+/* Smooth internal transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 200ms;
+}
+
+/* Typography polish */
 h1, h2, h3, h4 {
   font-family: var(--font-libre), serif;
+  letter-spacing: -0.01em;
 }
 
-code, pre {
-  font-family: var(--font-mono), monospace;
+/* Custom scrollbar to match theme */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.btn-primary {
-  @apply bg-[#6B2D3E] text-white px-6 py-3 rounded-[4px] font-bold transition-all hover:bg-[#5A2534] shadow-[4px_4px_0px_#2C3E50];
+::-webkit-scrollbar-track {
+  background: var(--bg);
 }
 
-.card {
-  @apply bg-white border border-[#4A3728] p-8 rounded-[4px] shadow-[4px_4px_0px_#4A3728];
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 3px solid var(--bg);
+  border-radius: 5px;
 }
 
-hr {
-  border-top: 2px solid #4A3728;
-  margin: 2rem 0;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
 }
