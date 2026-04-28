@@ -49,6 +49,7 @@ export default function LandingPage() {
           <div className="flex gap-10 text-xs font-bold uppercase tracking-[0.2em]">
             <a href="#philosophy" className="hover:text-[#6B2D3E] transition-colors">Philosophy</a>
             <a href="#engine" className="hover:text-[#6B2D3E] transition-colors">The Engine</a>
+            <a href="/api/slack/install" className="hover:text-[#6B2D3E] transition-colors text-[#6B2D3E]">Integrate Slack</a>
             <a href="#beta" className="hover:text-[#6B2D3E] transition-colors">Join Beta</a>
           </div>
         </nav>
@@ -64,11 +65,12 @@ export default function LandingPage() {
             Tracely bridges the gap between raw telemetry and tribal knowledge. We turn chaotic stack traces into instant, actionable fixes directly in your Slack threads.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="#beta" className="bg-[#6B2D3E] text-[#F4ECD8] px-10 py-4 rounded-[4px] font-bold text-lg hover:bg-[#5A2534] transition-all shadow-[6px_6px_0px_#2C3E50] transform hover:-translate-y-1 active:translate-y-0">
-              Join the Private Beta
+            <a href="/api/slack/install" className="bg-[#2C3E50] text-[#F4ECD8] px-10 py-4 rounded-[4px] font-bold text-lg hover:bg-black transition-all shadow-[6px_6px_0px_#6B2D3E] transform hover:-translate-y-1 active:translate-y-0 flex items-center gap-3">
+              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521a2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.958 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.52 2.521h-2.522v-2.521zM17.688 8.834a2.528 2.528 0 0 1-2.522 2.521a2.528 2.528 0 0 1-2.521-2.521V2.522A2.528 2.528 0 0 1 15.166 0a2.528 2.528 0 0 1 2.522 2.522v6.312zM15.166 18.958a2.528 2.528 0 0 1 2.522 2.521a2.528 2.528 0 0 1-2.522 2.522a2.528 2.528 0 0 1-2.521-2.522v-2.521h2.521zM15.166 17.688a2.528 2.528 0 0 1-2.521-2.522a2.528 2.528 0 0 1 2.521-2.522h6.312A2.528 2.528 0 0 1 24 15.166a2.528 2.528 0 0 1-2.522 2.522h-6.312z"/></svg>
+              Add to Slack
             </a>
-            <a href="#engine" className="px-10 py-4 border-2 border-[#4A3728] rounded-[4px] font-bold text-lg hover:bg-[#2C3E50] hover:text-[#F4ECD8] transition-all shadow-[6px_6px_0px_#4A3728] transform hover:-translate-y-1 active:translate-y-0">
-              Read the Manifesto
+            <a href="#beta" className="bg-[#6B2D3E] text-[#F4ECD8] px-10 py-4 rounded-[4px] font-bold text-lg hover:bg-[#5A2534] transition-all shadow-[6px_6px_0px_#2C3E50] transform hover:-translate-y-1 active:translate-y-0">
+              Join Pilot Program
             </a>
           </div>
         </section>
